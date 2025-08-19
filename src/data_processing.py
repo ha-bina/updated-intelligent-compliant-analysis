@@ -5,8 +5,9 @@ from config.settings import DATA_DIR, PRODUCT_CATEGORIES, TEXT_CLEANING_CONFIG
 
 def load_data(df):
     """Load complaint data from CSV file."""
-    file_path = Path(r"C:\Users\Yohanan\updated-intelligent-compliant-analysis\data\compliants.csv")
+    file_path = Path(r"C:\Users\Yohanan\updated-intelligent-compliant-analysis\data\complaints.csv")
     df = pd.read_csv(file_path)
+    return df  
 def filter_data(df: pd.DataFrame) -> pd.DataFrame:
     """Filter data to include only relevant product categories and non-empty narratives."""
     filtered = df[
